@@ -7,6 +7,10 @@ import { DoctorService } from './intermediate/spy/doctors.service';
 import { DoctorComponent } from './integration/doctor/doctor.component';
 import { HospitalComponent } from './integration/hospital/hospital.component';
 import { IncrementerComponent } from './integration/incrementer/incrementer.component';
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './advance/routes/routes';
+import { NavbarComponent } from './advance/navbar/navbar.component';
+import { RouterDoctorComponent } from './advance/router-doctor/router-doctor.component';
 
 @NgModule({
   declarations: [
@@ -14,10 +18,13 @@ import { IncrementerComponent } from './integration/incrementer/incrementer.comp
     DoctorsComponent,
     DoctorComponent,
     HospitalComponent,
-    IncrementerComponent
+    IncrementerComponent,
+    NavbarComponent,
+    RouterDoctorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [
     DoctorService,
